@@ -1,12 +1,12 @@
 provider "aws" {
-  region = "us-east-2"
+  region = "us-east-1"
 }
 
 resource "aws_instance" "RHEL-Server" {
   count         = 1
   ami           = "ami-0fe630eb857a6ec83"
   instance_type = "t2.micro"
-  key_name      = "Terraform"
+  key_name      = "Laptop Keypair"
   tags = {
     Name = "RHEL-Server"
   }
